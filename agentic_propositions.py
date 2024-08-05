@@ -12,7 +12,6 @@ from prompts import *
 class CreatePropositions:
     def __init__(self, llm: ChatWatsonx, source_language: str = "English", verbose: bool = True):
         
-        self.chunks = {}
         self.watsonx_llm = llm
         self.source_language = source_language
         self.verbose = verbose
