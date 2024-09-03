@@ -21,7 +21,7 @@ class CreatePropositions:
             self.create_propositions_system_prompt = "[INST]<<SYS>>" + CREATE_PROPOSITIONS_SYSTEM_PROMPT
             self.create_propositions_user_prompt = CREATE_PROPOSITIONS_USER_PROMPT + "[/INST]"
 
-        elif self.watsonx_llm.model_id in ["meta-llama/llama-3-70b-instruct", "meta-llama/llama-3-405b-instruct", "meta-llama/llama-3-1-8b-instruct"]:
+        elif self.watsonx_llm.model_id in ["meta-llama/llama-3-70b-instruct", "meta-llama/llama-3-405b-instruct", "meta-llama/llama-3-1-70b-instruct"]:
             self.create_propositions_system_prompt = "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n" + CREATE_PROPOSITIONS_SYSTEM_PROMPT.strip() + "<|eot_id|>\n<|start_header_id|>user<|end_header_id|>"
             self.create_propositions_user_prompt = CREATE_PROPOSITIONS_USER_PROMPT.strip() + "<|eot_id|>\n<|start_header_id|>assistant<|end_header_id|>"
         
@@ -60,7 +60,7 @@ class CreatePropositions:
                 essay_propositions.extend(propositions)
                 print(f"Done with paragraph {idx}")
             except Exception as e:
-                print(f"An error occurred while processing paragraph {i}: {e}")
+                print(f"An error occurred while processing paragraph {idx}: {e}")
         
         print(f"You have {len(essay_propositions)} propositions")
         return essay_propositions
