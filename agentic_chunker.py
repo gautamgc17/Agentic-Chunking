@@ -71,7 +71,7 @@ class AgenticChunker:
             self.update_chunk_summary_system_prompt = "[INST]<<SYS>>" + UPDATE_CHUNK_SUMMARY_SYSTEM_PROMPT
             self.update_chunk_summary_user_prompt = UPDATE_CHUNK_SUMMARY_USER_PROMPT + "[/INST]"
 
-        elif self.watsonx_llm.model_id in ["meta-llama/llama-3-70b-instruct", "meta-llama/llama-3-405b-instruct", "meta-llama/llama-3-1-8b-instruct"]:
+        elif self.watsonx_llm.model_id in ["meta-llama/llama-3-70b-instruct", "meta-llama/llama-3-405b-instruct", "meta-llama/llama-3-1-70b-instruct"]:
             self.update_chunk_summary_system_prompt = "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n" + UPDATE_CHUNK_SUMMARY_SYSTEM_PROMPT.strip() + "<|eot_id|>\n<|start_header_id|>user<|end_header_id|>"
             self.update_chunk_summary_user_prompt = UPDATE_CHUNK_SUMMARY_USER_PROMPT.strip() + "<|eot_id|>\n<|start_header_id|>assistant<|end_header_id|>"
         
@@ -99,7 +99,7 @@ class AgenticChunker:
             self.update_chunk_title_system_prompt = "[INST]<<SYS>>" + UPDATE_CHUNK_TITLE_SYSTEM_PROMPT
             self.update_chunk_title_user_prompt = UPDATE_CHUNK_TITLE_USER_PROMPT + "[/INST]"
 
-        elif self.watsonx_llm.model_id in ["meta-llama/llama-3-70b-instruct", "meta-llama/llama-3-405b-instruct", "meta-llama/llama-3-1-8b-instruct"]:
+        elif self.watsonx_llm.model_id in ["meta-llama/llama-3-70b-instruct", "meta-llama/llama-3-405b-instruct", "meta-llama/llama-3-1-70b-instruct"]:
             self.update_chunk_title_system_prompt = "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n" + UPDATE_CHUNK_TITLE_SYSTEM_PROMPT.strip() + "<|eot_id|>\n<|start_header_id|>user<|end_header_id|>"
             self.update_chunk_title_user_prompt = UPDATE_CHUNK_TITLE_USER_PROMPT.strip() + "<|eot_id|>\n<|start_header_id|>assistant<|end_header_id|>"
         
@@ -125,7 +125,7 @@ class AgenticChunker:
             self.new_chunk_summary_system_prompt = "[INST]<<SYS>>" + NEW_CHUNK_SUMMARY_SYSTEM_PROMPT
             self.new_chunk_summary_user_prompt = NEW_CHUNK_SUMMARY_USER_PROMPT + "[/INST]"
 
-        elif self.watsonx_llm.model_id in ["meta-llama/llama-3-70b-instruct", "meta-llama/llama-3-405b-instruct", "meta-llama/llama-3-1-8b-instruct"]:
+        elif self.watsonx_llm.model_id in ["meta-llama/llama-3-70b-instruct", "meta-llama/llama-3-405b-instruct", "meta-llama/llama-3-1-70b-instruct"]:
             self.new_chunk_summary_system_prompt = "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n" + NEW_CHUNK_SUMMARY_SYSTEM_PROMPT.strip() + "<|eot_id|>\n<|start_header_id|>user<|end_header_id|>"
             self.new_chunk_summary_user_prompt = NEW_CHUNK_SUMMARY_USER_PROMPT.strip() + "<|eot_id|>\n<|start_header_id|>assistant<|end_header_id|>"
         
@@ -152,7 +152,7 @@ class AgenticChunker:
             self.new_chunk_title_system_prompt = "[INST]<<SYS>>" + NEW_CHUNK_TITLE_SYSTEM_PROMPT
             self.new_chunk_title_user_prompt = NEW_CHUNK_TITLE_USER_PROMPT + "[/INST]"
 
-        elif self.watsonx_llm.model_id in ["meta-llama/llama-3-70b-instruct", "meta-llama/llama-3-405b-instruct", "meta-llama/llama-3-1-8b-instruct"]:
+        elif self.watsonx_llm.model_id in ["meta-llama/llama-3-70b-instruct", "meta-llama/llama-3-405b-instruct", "meta-llama/llama-3-1-70b-instruct"]:
             self.new_chunk_title_system_prompt = "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n" + NEW_CHUNK_TITLE_SYSTEM_PROMPT.strip() + "<|eot_id|>\n<|start_header_id|>user<|end_header_id|>"
             self.new_chunk_title_user_prompt = NEW_CHUNK_TITLE_USER_PROMPT.strip() + "<|eot_id|>\n<|start_header_id|>assistant<|end_header_id|>"
         else:
@@ -210,7 +210,7 @@ class AgenticChunker:
             self.find_relevant_chunk_system_prompt = "[INST]<<SYS>>" + FIND_RELEVANT_CHUNK_SYSTEM_PROMPT
             self.find_relevant_chunk_user_prompt = FIND_RELEVANT_CHUNK_USER_PROMPT + "[/INST]"
 
-        elif self.watsonx_llm.model_id in ["meta-llama/llama-3-70b-instruct", "meta-llama/llama-3-405b-instruct", "meta-llama/llama-3-1-8b-instruct"]:
+        elif self.watsonx_llm.model_id in ["meta-llama/llama-3-70b-instruct", "meta-llama/llama-3-405b-instruct", "meta-llama/llama-3-1-70b-instruct"]:
             self.find_relevant_chunk_system_prompt = "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n" + FIND_RELEVANT_CHUNK_SYSTEM_PROMPT.strip() + "<|eot_id|>\n<|start_header_id|>user<|end_header_id|>"
             self.find_relevant_chunk_user_prompt = FIND_RELEVANT_CHUNK_USER_PROMPT.strip() + "<|eot_id|>\n<|start_header_id|>assistant<|end_header_id|>"
         else:
