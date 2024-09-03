@@ -65,8 +65,3 @@ class CreatePropositions:
         print(f"You have {len(essay_propositions)} propositions")
         return essay_propositions
 
-
-
-
-
-
