@@ -299,27 +299,4 @@ class AgenticChunker:
         print("get_chunks") 
         print("--"*50)
         return self.get_chunks(get_type='list_of_strings')
-    
 
-
-if __name__ == "__main__":
-    model_id = "mistralai/mixtral-8x7b-instruct-v01"
-    credentials = {
-        "url": os.getenv("WML_URL"), 
-        "apikey": os.getenv("IBMCLOUD_APIKEY"), 
-        "project_id": os.getenv("WS_PROJECT_ID")
-    }
-    propositions = ['Il Tribunale di Perugia ha pronunciato una sentenza nella causa civile di I Grado iscritta al n. r.g. 6277/2017.',
- 'Il giudice dott. Giulio Berti ha emesso la sentenza.',
- "La causa è stata promossa da Persona_1, rappresentata dall'avvocato Avvocato_1.",
- "Persona_1 ha chiesto di accertare la responsabilità dei genitori del minore Parte_1 e/o del sig. CP_2 e/o della sig.ra Controparte_1 per i fatti esposti nell'atto di citazione.",
- 'Persona_1 ha chiesto di condannare i convenuti a risarcire il danno subito, quantificato in € 15.610,30, oltre interessi e rivalutazione monetaria.',
- 'La domanda avanzata da Persona_1 si è rivelata fondata e deve pertanto trovare accoglimento.',
- "La dinamica dell'incidente occorso a parte attrice è stata confermata dal teste Testimone_1.",
- "La responsabilità dei genitori per i fatti illeciti commessi dal minore con loro convivente è strettamente connessa all'art 147 cc.",
- 'I genitori sono tenuti ad educare ed istruire i figli e devono correggere comportamenti non corretti al fine di far crescere una persona rispettosa delle norme giuridiche e delle regole del vivere civile.',
- "A norma dell'art 2048 cc il padre, la madre o il tutore sono responsabili del danno illecito dei figli minori non emancipati o delle persone soggette alla tutela che abitano con essi."]
-    
-    ac = AgenticChunker(model_id=model_id, credentials=credentials)
-    chunks = ac.process_propositions_with_intermediate_steps(propositions)
-    print(chunks)
